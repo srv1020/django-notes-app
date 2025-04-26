@@ -22,7 +22,7 @@ pipeline{
         stage("build"){
             steps{
                 script{
-                docker_build("srvpndy","notes-app","latest")
+                docker_build("srvpndy","notes-app","01")
                     echo "code build successfully"
                 }
             }
@@ -30,7 +30,7 @@ pipeline{
         stage("push"){
             steps{
                 script{
-                    docker_push("notes-app", "latest", "srvpndy")
+                    docker_push("notes-app", "01", "srvpndy")
                 }
             }
         }
