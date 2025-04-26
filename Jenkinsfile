@@ -23,6 +23,7 @@ pipeline{
             steps{
                 script{
                 docker_build("srvpndy","notes-app","latest")
+                    echo "code build successfully"
                 }
             }
         }
